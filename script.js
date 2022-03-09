@@ -167,10 +167,13 @@ class View {
           handler(id)
         }
       })
+      this.view.bindAddTodo(this.handleAddTodo)
+      this.view.bindDeleteTodo(this.handleDeleteTodo)
+      this.view.bindToggleTodo(this.handleToggleTodo)
     }
-    this.view.bindAddTodo(this.handleAddTodo)
-    this.view.bindDeleteTodo(this.handleDeleteTodo)
-    this.view.bindToggleTodo(this.handleToggleTodo)
+    
   }
+    
+  
   
   const app = new Controller(new Model(), new View())
